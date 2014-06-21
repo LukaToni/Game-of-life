@@ -1,0 +1,55 @@
+Conway game of life
+
+Conway game of life is a process that is by discrete steps ("generations") takes place
+on the infinite rectangular grid of cells. Each cell can be either "alive" or "dead".
+Living cells is finally much. The game starts with an arrangement of living cells. Each
+generation of a new state of the cells calculated based on the following rules:
+
+  • If a live cell two or three live neighbors (out of eight possible) in the next
+  generation remained alive. Otherwise, it will die.
+  • If a dead cell exactly three live neighbors (out of eight possible) in the next
+  generation revived. Otherwise, it will remain dead.
+  
+New state is calculated solely on the basis of the current. All the "birth" and "death"
+cells occur at the same time.
+
+Write a program on the basis of an initial deployment of viable cells calculated state
+after the specified number of generations. The input data are arranged in the following order:
+  • The first line of input is given number of generations (g, 1? G? 20).
+  • The second line is the specified number of living cells (n0, 1? N0? 1000).
+
+
+  • In the following n lines are given the coordinates of each of live cells. Coordinates
+  are given in the form of pairs of numbers in and separated with one space,
+  which represents the row, but the column coordinate. Each coordinate is even
+  number between -109 and 109 (ie, the type int quite enough).
+  
+At the output of your program should print the following information:
+
+  • If the number of viable cells per g of generations equal to 0, the program displays only
+  the number 0 and the new line.
+  • Otherwise, the program displays the type number ng, vmin, vmax, smin and smax, where ng is
+  the number of viable cells per g generations, vmin and vmax line
+  coordinates of the uppermost and lowermost of live cells per g of generations, smin
+  and smax is the most column coordinates of the left and right most viable cells per g
+  generations. The numbers should be separated with one space, display
+  should be completed by jumping on a new line.
+  
+In the case of Figure 1 to be input is given as follows (in order of passing the coordinates can be
+any):
+
+3
+7
+11 -26
+12 -24
+13 -27
+13 -26
+13 -23
+13 -22
+13 -21
+
+The expected output would look like this:
+
+11 11 14 -27 -21
+
+We can assume that in any of the generations will not live longer than 1000 cells.
